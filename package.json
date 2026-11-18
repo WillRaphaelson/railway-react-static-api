@@ -1,0 +1,1 @@
+{"name":"railway-react-static-api","version":"1.0.0","private":true,"type":"module","scripts":{"check":"tsc --noEmit","test":"node --test api/server.test.mjs"},"devDependencies":{"railway":"3.16.0","typescript":"5.9.3","@types/node":"22.19.1"}}

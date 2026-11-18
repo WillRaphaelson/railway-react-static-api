@@ -1,0 +1,27 @@
+{
+	admin off
+	persist_config off
+	auto_https off
+}
+:{$PORT:8080} {
+	root * /app/dist
+	encode zstd gzip
+	header X-Content-Type-Options nosniff
+	header Referrer-Policy strict-origin-when-cross-origin
+	handle /health {
+		respond "ok" 200
+	}
+	handle /api/* {
+		header Cache-Control "no-store"
+		reverse_proxy {$API_HOST:localhost}:{$API_PORT:3001}
+	}
+	handle /assets/* {
+		header Cache-Control "public, max-age=31536000, immutable"
+		file_server
+	}
+	handle {
+		header Cache-Control "public, max-age=0, s-maxage=60"
+		try_files {path} /index.html
+		file_server
+	}
+}

@@ -35,6 +35,10 @@ npm --prefix web run dev
 
 Vite proxies `/api` to port 3001 during development. The deployed frontend uses Caddy instead of the Vite development server. Caddy's production document root is `/app/dist`, matching the Railpack runtime layout.
 
+## Deploy the template
+
+Use the [React frontend and private form API template](https://railway.com/deploy/static-hosting-react-api) to create both services. Port values and private service references are preconfigured. No database or external credentials are required. Enable CDN caching on `web` after deployment, then test the form.
+
 ## Deploy from the repository
 
 Use a Railway account and current CLI. See [Railway's quick start](https://docs.railway.com/quick-start), [IaC guide](https://docs.railway.com/infrastructure-as-code), and [production readiness checklist](https://docs.railway.com/platform/production-readiness-checklist).

@@ -4,7 +4,7 @@ A React/Vite website served by Caddy with a separate Node.js validation API. The
 
 ## About Hosting a React Frontend With a Form API
 
-The template creates two services: `web` and `api`. The frontend builds static assets and serves them with Caddy. The API validates a name, email, and message, returning a receipt without storing or emailing the submission. No database or external credentials are required.
+The template creates two services: `web` and `api`. The frontend builds static assets and serves them with Caddy. The API validates a name, email, and message, returning a receipt without storing or emailing the submission. No database or external credentials are required. The API port, environment mode, and private hostname reference are preconfigured; no user-supplied variables are required.
 
 ## Why Deploy This Example on Railway
 
